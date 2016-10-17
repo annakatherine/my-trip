@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title: string = 'Hello My-Trip';
+  lat: number = 44.959764;
+  lng: number = -93.285802;
 }

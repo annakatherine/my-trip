@@ -1,3 +1,22 @@
 <h1>
   {{title}}
 </h1>
+
+<h4>Starting Point</h4>
+<div><key-up3></key-up3></div>
+
+<h4>Ending Point</h4>
+<div><key-up3></key-up3></div>
+
+<p>
+  <submit-trip></submit-trip>
+</p>
+<form novalidate [formGroup]="form">
+  <input type="text" name="name" ngModel required>
+  <input type="text" name="street" ngModel minlength="3">
+  <input type="text" name="city" ngModel maxlength="10">
+  <input type="text" name="zip" ngModel pattern="[A-Za-z]{5}">
+</form>
+<sebm-google-map [latitude]="lat" [longitude]="lng">
+  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+</sebm-google-map>
